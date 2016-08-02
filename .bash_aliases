@@ -1,0 +1,6 @@
+alias ls='ls --color'
+alias ll='ls -al'
+alias grep='grep --color'
+alias rm='rm -i'
+alias mv='mv -i'
+alias prettyjson='python -m json.tool'
