@@ -5,5 +5,5 @@ rc, aliases for private shell
 
 
 ```
-curl -o https://raw.githubusercontent.com/YUChoe/dotfiles/master/install_basic_rpms.sh | bash 
+curl https://raw.githubusercontent.com/YUChoe/dotfiles/master/install_basic_rpms.sh | bash 
 ```
