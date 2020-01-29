@@ -6,3 +6,4 @@ alias mv='mv -i'
 alias prettyjson='python -m json.tool'
 alias virtualenv='virtualenv -p python3'
 alias nslookup='getent hosts'
+alias cp="rsync -ah --progress"
