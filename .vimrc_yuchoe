@@ -1,0 +1,41 @@
+set nocompatible
+set wrap
+set visualbell
+set ch=2
+set noruler
+set tabstop=4 showmatch
+set shiftwidth=4
+set smarttab
+set smartcase
+set mouse=
+"set encoding=utf8
+set hlsearch
+
+syntax on
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+set bs=indent,eol,start     " allow backspacing over everything in insert mode
+
+" rainbow {{}{}}
+au FileType c,py call rainbow#load()
+
+" fold/unfold
+set foldmethod=manual
+
+" statusline
+let GitBranch = system("sh -c 'git rev-parse --abbrev-ref HEAD' | tr -d '\\n'")
+
+set laststatus=2
+set statusline=
+set statusline+=\
+set statusline+=[%{g:GitBranch}]
+set statusline+=\ %f%r
+set statusline+=%=
+set statusline+=\ %p%%
+set statusline+=\ %LL
+set statusline+=\ %l:%c
+set statusline+=\
