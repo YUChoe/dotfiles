@@ -32,7 +32,7 @@ let GitBranch = system("sh -c 'git rev-parse --abbrev-ref HEAD' | tr -d '\\n'")
 set laststatus=2
 set statusline=
 set statusline+=\
-set statusline+=[%{g:GitBranch}]
+set statusline+=\ [git:%{g:GitBranch}]
 set statusline+=\ %f%r
 set statusline+=%=
 set statusline+=\ %p%%
