@@ -1,0 +1,36 @@
+setenv  PLATFORM    `uname -s`
+setenv  OSREL       ""
+setenv  COMPILER    g++
+#setenv  COMPILER    gcc
+setenv  AR          'ar rv'
+setenv  GNUFLAG     ""
+#setenv  LEX        flex
+#setenv  YACC       bison
+setenv  XWARN
+setenv  MY_DFLAGS   "-g"
+setenv  MY_IFLAGS   "-I/usr/include  -I/usr/local/include"
+setenv  SYSLIB      "-lrt -lm -lnsl -lpthread"
+setenv  OS_TYPE      Linux
+setenv  PIC         -fPIC
+setenv  SOPT        '-shared -Wl,-soname,$(TARGET_S)'
+setenv  SLIB        '-L$(VG_HOME)/slib/$(ARCH)'
+
+
+# yonguk
+# setenv DISPLAY 10.100.1.187:0.0
+setenv TERM linux
+
+set cred="%{\033[1;31m%}"
+set cgreen="%{\033[0;32m%}"
+set cyellow="%{\033[1;33m%}"
+set cblue="%{\033[1;34m%}"
+set cmagenta="%{\033[1;35m%}"
+set ccyan="%{\033[1;36m%}"
+set cwhite="%{\033[0;37m%}"
+set cend="%{\033[0m%}" # This is needed at the end...
+
+
+alias vi    'vim -X -n -u $HOME/.vimrc.yuchoe'
+alias precmd "source ~/.cshrc.git"
+#
+alias gitdiff 'git difftool -y --tool=vimdiff'
