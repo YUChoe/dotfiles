@@ -39,3 +39,8 @@ set statusline+=\ %p%%
 set statusline+=\ %LL
 set statusline+=\ %l:%c
 set statusline+=\
+
+
+if &diff " vimdiff
+  set foldmethod diff
+endif
