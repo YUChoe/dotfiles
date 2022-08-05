@@ -9,7 +9,12 @@ set smarttab
 set smartcase
 set mouse=
 "set encoding=utf8
+
+set t_Co=256
+
 set hlsearch
+set cursorline
+highlight cursorline cterm=NONE ctermbg=237
 
 syntax on
 
